@@ -1,10 +1,10 @@
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Post from '../components/Post';
-import { sortByDate } from '../utils/index';
+import Post from '@/components/Post';
+import { sortByDate } from '@/utils/index';
 
 export async function getStaticProps() {
 	const files = fs.readdirSync(path.join('posts'));

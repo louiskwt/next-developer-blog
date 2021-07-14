@@ -1,11 +1,11 @@
-import Layout from '../../../components/Layout';
+import Layout from '@/components/Layout';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Post from '../../../components/Post';
-import Pagination from '../../../components/Pagination';
-import { sortByDate } from '../../../utils/index';
-import { POSTS_PER_PAGE } from '../../../config';
+import Post from '@/components/Post';
+import Pagination from '@/components/Pagination';
+import { sortByDate } from '@/utils/index';
+import { POSTS_PER_PAGE } from '@/config/index';
 
 export async function getStaticPaths() {
 	const files = fs.readdirSync(path.join('posts'));
